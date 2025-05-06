@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "mcp-orchestrator"
+version = "0.1.0"
+description = "A CLI tool for orchestrating multiple LLM agents using the Model Context Protocol"
+authors = ["Koshal"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+typer = {extras = ["all"], version = "^0.9.0"}
+pydantic = "^2.5.2"
+pyyaml = "^6.0.1"
+sqlalchemy = "^2.0.23"
+aiosqlite = "^0.19.0"
+asyncio = "^3.4.3"
+colorlog = "^6.7.0"
+python-dotenv = "^1.0.0"
+modelcontextprotocol = "^0.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+pytest-cov = "^4.1.0"
+black = "^23.11.0"
+isort = "^5.12.0"
+mypy = "^1.7.1"
+
+[tool.poetry.scripts]
+mcp-orchestrator = "mcp_orchestrator.cli:app"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
