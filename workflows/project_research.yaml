@@ -1,0 +1,4 @@
+# Example YAML workflow definition
+workflow:
+  name: project_research
+  steps: []

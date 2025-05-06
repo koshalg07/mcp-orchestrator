@@ -1,0 +1,15 @@
+services:
+  mcp-orchestrator:
+    build: .
+    container_name: mcp_orchestrator
+    volumes:
+      - .:/app
+      - mcp_data:/app/data
+    env_file:
+      - .env.example
+    command: python cli.py hello
+    tty: true
+    stdin_open: true
+
+volumes:
+  mcp_data:

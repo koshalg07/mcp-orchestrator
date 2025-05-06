@@ -1,0 +1,39 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Poetry and virtualenv (if you used Poetry or other virtual environments)
+.poetry/
+*.venv/
+
+# Docker files
+docker-compose.override.yml
+.docker/
+*.docker/
+
+# VS Code settings
+.vscode/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*  # If you have multiple env files for different environments (e.g., .env.production, .env.dev)
+
+# SQLite database files (if you're using SQLite for state/storage)
+*.sqlite3
+*.db
+
+# Python Packaging
+*.egg-info/
+dist/
+build/
+eggs/
+MANIFEST
